@@ -415,14 +415,6 @@
         document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
     }
 
-    cards.forEach(card => {
-        card.addEventListener('click', () => {
-            cards.forEach(c => c.classList.remove('selected'));
-            card.classList.add('selected');
-            state.selectedAmount = card.dataset.amount;
-            showError('error-step1', '');
-        });
-    });
 
     const delay = ms => new Promise(res => setTimeout(res, ms));
     async function typewrite(element, text, speed = 30) {
@@ -438,7 +430,7 @@
 
         const sequence = [
             { text: "[INITIATING GIMBUCKS PROTOCOL...]", delay: 1000 },
-            { text: `[AUTHORIZING PAYLOAD: ${state.100000} GIMBUCKS...]`, delay: 1500, success: true },
+            { text: `[AUTHORIZING PAYLOAD: ${state.1000} GIMBUCKS...]`, delay: 1500, success: true },
             { text: "[ESTABLISHING SECURE CONNECTION...]", delay: 1000 },
             { text: `[ENCRYPTING USER SIGNATURE: ${state.username }...]`, delay: 1500 },
             { text: "[SIGNATURE HASHED & VERIFIED]", delay: 1000, success: true },
@@ -449,24 +441,3 @@
             const line = document.createElement('div');
             line.classList.add('log-line');
             if (item.success) line.classList.add('success');
-            if (item.error) line.classList.add('error');
-            log.appendChild(line);
-            await typewrite(line, item.text);
-            await delay(item.delay);
-        }
-        
-        goToStep(4);
-    }
-    
-    document.addEventListener('DOMContentLoaded', updateUI);
-</script>
-
-</body>
-</html>
-
-
-
-
-
-
-
