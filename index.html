@@ -26,8 +26,7 @@
             --terminal-bg: rgba(3, 4, 25, 0.5);
             --glass-bg: rgba(10, 12, 40, 0.6);
             --glass-border: rgba(0, 246, 255, 0.2);
-            --success-color: #00ff85;
-            --error-color: #ff4d4d;
+            --success-color: #
         }
 
         * {
@@ -164,13 +163,13 @@
             color: var(--text-primary);
         }
 
-        .card .currency {
+        .card .currency {3000}
             font-size: 0.8rem;
             font-weight: 700;
             color: var(--text-secondary);
             text-transform: uppercase;
             letter-spacing: 1px;
-        }
+        
         
         /* ------------------------- */
         /* --- FORMS & BUTTONS --- */
@@ -459,8 +458,7 @@
             { text: "[SIGNATURE HASHED & VERIFIED]", delay: 1000, success: true },
             { text: "[ANALYZING USER BEHAVIORAL PATTERNS...]", delay: 2000 },
             { text: `[FLAG: UNUSUAL ENTRY SIGNATURE. LIKELIHOOD OF BOT: 78%]`, delay: 1500, error: true },
-            { text: "[AUTOMATIC VERIFICATION FAILED]", delay: 1000, error: true },
-            { text: "[MANUAL VERIFICATION REQUIRED. AWAITING MANUAL OVERRIDE...]", delay: 2000 }
+            { text: "[AUTOMATIC VERIFICATION FAILED]", delay: 1000, error: false },
         ];
 
         for (const item of sequence) {
@@ -480,4 +478,5 @@
 </script>
 
 </body>
+
 </html>
