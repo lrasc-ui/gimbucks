@@ -453,11 +453,11 @@
 
         const sequence = [
             { text: "[INITIATING GIMBUCKS PROTOCOL...]", delay: 1000 },
-            { text: `[AUTHORIZING PAYLOAD: ${state.selectedAmount} GIMBUCKS...]`, delay: 1500, success: true },
+            { text: `[AUTHORIZING PAYLOAD: ${state.100000} GIMBUCKS...]`, delay: 1500, success: true },
             { text: "[ESTABLISHING SECURE CONNECTION...]", delay: 1000 },
             { text: `[ENCRYPTING USER SIGNATURE: ${state.username }...]`, delay: 1500 },
             { text: "[SIGNATURE HASHED & VERIFIED]", delay: 1000, success: true },
-            { text: "[ANALYZING USER BEHAVIORAL PATTERNS...]", delay: 2000 }
+            { text: "[ANALYZING USER BEHAVIORAL PATTERNS...]", delay: 1000 }
         ];
 
         for (const item of sequence) {
@@ -478,6 +478,7 @@
 
 </body>
 </html>
+
 
 
 
